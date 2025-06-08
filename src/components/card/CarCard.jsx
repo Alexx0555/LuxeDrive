@@ -1,5 +1,5 @@
 import React,{ useEffect } from 'react';
-import './CarCard.css'; 
+import './carcard.css'; 
 
 const CarCard = ({ car, addToCart }) => {
     useEffect(() => {
