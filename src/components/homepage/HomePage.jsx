@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BrandFilter from '../brandfil/BrandFilter';
 import CarCard from '../card/CarCard';
-import './HomePage.css';
+import './homepage.css';
 
 const carData = [
     { id: 1, brand: 'Mercedes', model: 'S-Class', price: 110000, image: './src/assets/s-class.webp' },
