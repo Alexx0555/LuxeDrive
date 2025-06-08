@@ -1,0 +1,71 @@
+.car-card-container {
+    position: relative;
+    background-color: #111827;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    /* JS will set --rotateX and --rotateY */
+    transform: perspective(1000px) rotateY(var(--rotateY, 0)) rotateX(var(--rotateX, 0)) scale3d(1, 1, 1);
+}
+.car-card-container:hover {
+    transform: perspective(1000px) rotateY(var(--rotateY, 0)) rotateX(var(--rotateX, 0)) scale3d(1.05, 1.05, 1.05);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(6, 182, 212, 0.5);
+}
+.car-card-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    /* JS will set --angle */
+    background: conic-gradient(from var(--angle, 0deg), #06b6d4, #a855f7, #d946ef, #a855f7, #06b6d4);
+}
+.car-card-container:hover .car-card-border {
+    opacity: 1;
+    animation: spin 3s linear infinite;
+}
+.car-card-content {
+    position: relative;
+    background-color: #111827;
+    border-radius: 8px;
+    margin: 2px;
+    height: calc(100% - 4px);
+    display: flex;
+    flex-direction: column;
+}
+.car-card-image {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    transition: transform 0.5s;
+}
+.car-card-container:hover .car-card-image {
+    transform: scale(1.05);
+}
+.car-card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.car-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+}
+.car-card-container:hover .car-card-title {
+    color: #06b6d4;
+}
+.car-card-price {
+    font-size: 1.25rem;
+    color: #c084fc;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+@property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@keyframes spin { from { --angle: 0deg; } to { --angle: 360deg; } }

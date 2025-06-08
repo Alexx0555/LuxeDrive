@@ -1,0 +1,25 @@
+.content-page {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #0d0d1a;
+    background-image: 
+        linear-gradient(rgba(192, 132, 252, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(192, 132, 252, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+.content-page {
+    min-height: calc(100vh - 150px); 
+}
+
+.text-center { text-align: center; }
+.about-text {
+    color: #d1d5db;
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,50 @@
+.brand-filter-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: rgba(17, 24, 39, 0.5);
+}
+.brand-filter-container { text-align: center; }
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+}
+.brand-logos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+    @media (min-width: 768px) { .brand-logos-wrapper { gap: 2rem; } }
+
+.brand-logo-container {
+    padding: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(to right, #1e1b4b, #4c1d95);
+    transition: all 0.3s ease;
+}
+.brand-logo-container.active {
+    box-shadow: 0 0 20px #a855f7, 0 0 30px #a855f7;
+    background: linear-gradient(to right, #a855f7, #06b6d4);
+}
+.brand-logo-inner {
+    background: #111;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand-logo-image { height: 3rem; object-fit: contain; }
+.brand-logo-container:hover .brand-logo-inner {
+    transform: scale(0.95);
+}
+.brand-logo-container.active .brand-logo-inner {
+    background: transparent;
+}
